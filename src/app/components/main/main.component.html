@@ -6,7 +6,7 @@
                 <div class="card-container" [ngClass]="getClassFromIndex(i)">
                     <img *ngIf="isAffichageMedaille(i)" class="card-medaille" src="{{getUrlMedaille(i)}}"/>
                     <div class="card-image-container">
-                        <img class="card-image" src="{{person.image}}">
+                        <img class="card-image" src="{{basePath + person.image}}">
                     </div>
                     <div class="card-infos">
                         <p><strong>{{person.prenom}} {{person.nom}}</strong></p>
