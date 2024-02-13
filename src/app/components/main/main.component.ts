@@ -17,7 +17,7 @@ export class MainComponent implements OnInit {
   }
 
   initListePersons(): void {
-    this.http.get<Persons[]>('../../../assets/persons.json').subscribe((datas: any) => {
+    this.http.get<Persons[]>('/assets/persons.json').subscribe((datas: any) => {
       datas.map((data: any) => this.lstPersons.push(data));
       if (this.lstPersons.length) {
         this.lstPersons.sort(function(a, b) {
