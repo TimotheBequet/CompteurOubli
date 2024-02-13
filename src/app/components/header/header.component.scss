@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+
+.header-container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .header-title {
+        text-align: center;
+        font-size: 50px;
+        font-family: 'Protest Strike', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-shadow: rgb(151, 148, 134) 1px 0 10px;
+        color: white;
+
+        @media (max-width: 768px) {
+            font-size: 30px;
+        }
+    }
+}

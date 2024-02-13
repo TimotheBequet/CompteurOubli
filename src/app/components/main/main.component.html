@@ -1,0 +1,19 @@
+<main class="container">
+    <div class="main">
+        <h1 class="main-title">Classement</h1>
+        <div class="cards-list">
+            <div *ngFor="let person of lstPersons;let i=index;" class="card">
+                <div class="card-container" [ngClass]="getClassFromIndex(i)">
+                    <img *ngIf="isAffichageMedaille(i)" class="card-medaille" src="{{getUrlMedaille(i)}}"/>
+                    <div class="card-image-container">
+                        <img class="card-image" src="{{person.image}}">
+                    </div>
+                    <div class="card-infos">
+                        <p><strong>{{person.prenom}} {{person.nom}}</strong></p>
+                        <p>Oubli<i *ngIf="person.score > 1">s</i> : <strong>{{person.score}}</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
