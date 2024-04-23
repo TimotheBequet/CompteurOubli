@@ -2,103 +2,109 @@
     {
         "nom": "Constans",
         "prenom": "Margot",
-        "image": "../../../assets/images/margot.jpg",
+        "image": "/assets/images/margot.jpg",
         "score": 1
     },
     {
         "nom": "Cantin",
         "prenom": "Aymeric",
-        "image": "../../../assets/images/Rico.jpg",
+        "image": "/assets/images/Rico.jpg",
         "score": 1
     },
     {
         "nom": "Goube",
         "prenom": "Camille",
-        "image": "../../../assets/images/camille-g.jpeg",
+        "image": "/assets/images/camille-g.jpeg",
         "score": 1
     },
     {
         "nom": "La fille de Benoît Larcher",
         "prenom": "",
-        "image": "../../../assets/images/benoit.jpeg",
+        "image": "/assets/images/benoit.jpeg",
         "score": 1
     },
     {
         "nom": "Kouyaté",
         "prenom": "Kéléti",
-        "image": "../../../assets/images/keleti.jpeg",
+        "image": "/assets/images/keleti.jpeg",
         "score": 1
     },    
     {
         "nom": "Jouathel",
         "prenom": "Hugo",
-        "image": "../../../assets/images/hugo.jpeg",
+        "image": "/assets/images/hugo.jpeg",
         "score": 5
     },
     {
         "nom": "Urban",
         "prenom": "Blaise",
-        "image": "../../../assets/images/blaise.jpg",
-        "score": 3
+        "image": "/assets/images/blaise.jpg",
+        "score": 4
     },
     {
         "nom": "Abescat",
         "prenom": "Adrien",
-        "image": "../../../assets/images/adrien-a.jpg",
+        "image": "/assets/images/adrien-a.jpg",
         "score": 1
     },
     {
         "nom": "Bracco",
         "prenom": "Corentin",
-        "image": "../../../assets/images/corentin.jpeg",
+        "image": "/assets/images/corentin.jpeg",
         "score": 1
     },
     {
         "nom": "Lachaume",
         "prenom": "Théo",
-        "image": "../../../assets/images/theo.jpg",
+        "image": "/assets/images/theo.jpg",
         "score": 1
     },
     {
         "nom": "Chretien",
         "prenom": "Emeline",
-        "image": "../../../assets/images/emeline.jpg",
+        "image": "/assets/images/emeline.jpg",
         "score": 1
     },
     {
         "nom": "Borgna",
         "prenom": "Jérémy",
-        "image": "../../../assets/images/Jerem.jpg",
+        "image": "/assets/images/Jerem.jpg",
         "score": 6
     },
     {
         "nom": "Bequet",
         "prenom": "Timothé",
-        "image": "../../../assets/images/Tim.jpeg",
+        "image": "/assets/images/Tim.jpeg",
         "score": 1
     },
     {
         "nom": "Ducrocq",
         "prenom": "Martin",
-        "image": "../../../assets/images/martin.jpeg",
+        "image": "/assets/images/martin.jpeg",
         "score": 1
     },
     {
         "nom": "Bertrand",
         "prenom": "Pierre-Antoine",
-        "image": "../../../assets/images/pab.jpeg",
-        "score": 1
+        "image": "/assets/images/pab.jpeg",
+        "score": 2
     },
     {
         "nom": "Jourda",
         "prenom": "Maïlys",
-        "image": "../../../assets/images/mailys.jpeg",
+        "image": "/assets/images/mailys.jpeg",
         "score": 2
     },
     {
         "nom": "Giraudon",
         "prenom": "Manon",
-        "image": "../../../assets/images/manon-g.jpg",
+        "image": "/assets/images/manon-g.jpg",
+        "score": 1
+    },
+    {
+        "nom": "Mangin",
+        "prenom": "Loïc",
+        "image": "/assets/images/loic.jpg",
         "score": 1
     }
 ]
