@@ -39,7 +39,7 @@
         "nom": "Urban",
         "prenom": "Blaise",
         "image": "/assets/images/blaise.jpg",
-        "score": 3
+        "score": 4
     },
     {
         "nom": "Abescat",
@@ -87,7 +87,7 @@
         "nom": "Bertrand",
         "prenom": "Pierre-Antoine",
         "image": "/assets/images/pab.jpeg",
-        "score": 1
+        "score": 2
     },
     {
         "nom": "Jourda",
@@ -99,6 +99,12 @@
         "nom": "Giraudon",
         "prenom": "Manon",
         "image": "/assets/images/manon-g.jpg",
+        "score": 1
+    },
+    {
+        "nom": "Mangin",
+        "prenom": "Loïc",
+        "image": "/assets/images/loic.jpg",
         "score": 1
     }
 ]
