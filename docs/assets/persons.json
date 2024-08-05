@@ -39,7 +39,7 @@
         "nom": "Urban",
         "prenom": "Blaise",
         "image": "/assets/images/blaise.jpg",
-        "score": 5
+        "score": 6
     },
     {
         "nom": "Abescat",
@@ -69,7 +69,7 @@
         "nom": "Borgna",
         "prenom": "Jérémy",
         "image": "/assets/images/Jerem.jpg",
-        "score": 6
+        "score": 8
     },
     {
         "nom": "Bequet",
