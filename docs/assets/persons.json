@@ -106,5 +106,23 @@
         "prenom": "Loïc",
         "image": "/assets/images/loic.jpg",
         "score": 1
+    },
+    {
+        "nom": "Centis",
+        "prenom": "David",
+        "image": "/assets/images/david.jpg",
+        "score": 1
+    },
+    {
+        "nom": "Sausset",
+        "prenom": "Cindy",
+        "image": "/assets/images/cindy.jpg",
+        "score": 1
+    },
+    {
+        "nom": "Belmas",
+        "prenom": "Jessica",
+        "image": "/assets/images/jess.jpg",
+        "score": 1
     }
 ]
