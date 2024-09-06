@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+.main {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+
+    &-title {
+        margin-top: 35px;
+        text-transform: uppercase;
+        font-weight: bolder;
+        color: aliceblue;
+        font-size: 35px;
+    }
+
+    .cards-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: 30px 10%;
+
+        .card {
+            width: calc(33.33% - 20px);
+            display: flex;
+            justify-content: center;
+
+            .card-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 10px;
+                border-radius: 10px;
+                margin: 20px;
+                background-color: white;
+                width: 200px;
+                height: 250px;
+                transition: all 0.2s linear;
+                position: relative;
+
+                .card-medaille {
+                    max-width: 35%;
+                    z-index: 999;
+                    position: absolute;
+                    top: -10px;
+                    left: -20px;
+                }
+
+                .card-image-container {
+                    width: 200px;
+                    height: 150px;
+                    overflow: hidden;
+                    position: relative;
+                    margin: auto;
+
+                    .card-image {
+                        width: 100%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                .card-infos p:first-child {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                .card-infos > p > i {
+                    font-style: normal;
+                }
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            .gold {
+                box-shadow: gold 0px 7px 29px 0px;
+            }
+            .silver {
+                box-shadow: rgb(192, 191, 191) 0px 7px 29px 0px;
+            }
+            .bronze {
+                box-shadow: #CD7F32 0px 7px 29px 0px;
+            }
+
+            @media (max-width: 1024px) {
+                width: calc(50% - 20px);
+            }
+
+            @media (max-width: 635px) {
+                width: 90%;
+            }
+        }
+    }
+}
