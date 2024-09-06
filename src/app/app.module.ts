@@ -7,12 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PageClassementComponent } from './components/page-classement/page-classement.component';
+import { HistoriqueComponent } from './components/historique/historique.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MainComponent
+    MainComponent,
+    PageClassementComponent,
+    HistoriqueComponent
   ],
   imports: [
     BrowserModule,

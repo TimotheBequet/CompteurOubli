@@ -4,10 +4,13 @@
     width: 100%;
     height: 100px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 1.5rem;
 
-    .header-title {
+    .header-title a {
+        text-decoration: none;
         text-align: center;
         font-size: 50px;
         font-family: 'Protest Strike', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -18,6 +21,24 @@
 
         @media (max-width: 768px) {
             font-size: 30px;
+        }
+    }
+
+    .histo {
+        width: 100%;
+
+        &-list {
+            display: flex;
+            justify-content: space-around;
+
+            &-item {
+                list-style: none;
+
+                & a {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
         }
     }
 }
