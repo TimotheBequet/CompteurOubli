@@ -1,0 +1,14 @@
+[
+    {
+        "nom": "Borgna",
+        "prenom": "Jérémy",
+        "image": "/assets/images/Jerem.jpg",
+        "score": 1
+    },
+    {
+        "nom": "Carmaran",
+        "prenom": "Julian",
+        "image": "/assets/images/julian.jpg",
+        "score": 1
+    }
+]
