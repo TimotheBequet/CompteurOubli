@@ -10,5 +10,17 @@
         "prenom": "Julian",
         "image": "/assets/images/julian.jpg",
         "score": 1
+    },
+    {
+        "nom": "Giraudon",
+        "prenom": "Manon",
+        "image": "/assets/images/manon-g.jpg",
+        "score": 1
+    },
+    {
+        "nom": "Sausset",
+        "prenom": "Cindy",
+        "image": "/assets/images/cindy.jpg",
+        "score": 1
     }
 ]
