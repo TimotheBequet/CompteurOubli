@@ -22,5 +22,41 @@
         "prenom": "Cindy",
         "image": "/assets/images/cindy.jpg",
         "score": 1
+    },
+    {
+        "nom": "Ramondou",
+        "prenom": "Perrine",
+        "image": "/assets/images/perrine.jpeg",
+        "score": 1
+    },
+    {
+        "nom": "Deniel",
+        "prenom": "Yoann",
+        "image": "/assets/images/yoann_deniel.jpg",
+        "score": 1
+    },
+    {
+        "nom": "Jouathel",
+        "prenom": "Hugo",
+        "image": "/assets/images/hugo.jpeg",
+        "score": 1
+    },
+    {
+        "nom": "Desmée",
+        "prenom": "Justine",
+        "image": "/assets/images/justine-d.jpg",
+        "score": 2
+    },
+    {
+        "nom": "Bequet",
+        "prenom": "Timothé",
+        "image": "/assets/images/Tim.jpeg",
+        "score": 2
+    },
+    {
+        "nom": "Borjon-Piron",
+        "prenom": "Juline",
+        "image": "/assets/images/juline.jpg",
+        "score": 1
     }
 ]
