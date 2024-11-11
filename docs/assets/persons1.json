@@ -39,13 +39,13 @@
         "nom": "Jouathel",
         "prenom": "Hugo",
         "image": "/assets/images/hugo.jpeg",
-        "score": 1
+        "score": 3
     },
     {
         "nom": "Desmée",
         "prenom": "Justine",
         "image": "/assets/images/justine-d.jpg",
-        "score": 2
+        "score": 3
     },
     {
         "nom": "Bequet",
@@ -57,6 +57,18 @@
         "nom": "Borjon-Piron",
         "prenom": "Juline",
         "image": "/assets/images/juline.jpg",
+        "score": 1
+    },
+    {
+        "nom": "Jourda",
+        "prenom": "Maïlys",
+        "image": "/assets/images/mailys.jpeg",
+        "score": 1
+    },
+    {
+        "nom": "Urban",
+        "prenom": "Blaise",
+        "image": "/assets/images/blaise.jpg",
         "score": 1
     }
 ]
