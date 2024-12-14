@@ -3,7 +3,7 @@
         "nom": "Borgna",
         "prenom": "Jérémy",
         "image": "/assets/images/Jerem.jpg",
-        "score": 1
+        "score": 2
     },
     {
         "nom": "Carmaran",
@@ -33,7 +33,7 @@
         "nom": "Deniel",
         "prenom": "Yoann",
         "image": "/assets/images/yoann_deniel.jpg",
-        "score": 1
+        "score": 2
     },
     {
         "nom": "Jouathel",
@@ -69,6 +69,18 @@
         "nom": "Urban",
         "prenom": "Blaise",
         "image": "/assets/images/blaise.jpg",
+        "score": 1
+    },
+    {
+        "nom": "Sistac",
+        "prenom": "François",
+        "image": "/assets/images/francois.jpg",
+        "score": 1
+    },
+    {
+        "nom": "Orban",
+        "prenom": "Audrey",
+        "image": "/assets/images/audrey.jpg",
         "score": 1
     }
 ]
