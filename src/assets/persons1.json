@@ -3,7 +3,7 @@
         "nom": "Borgna",
         "prenom": "Jérémy",
         "image": "/assets/images/Jerem.jpg",
-        "score": 2
+        "score": 4
     },
     {
         "nom": "Carmaran",
@@ -15,7 +15,7 @@
         "nom": "Giraudon",
         "prenom": "Manon",
         "image": "/assets/images/manon-g.jpg",
-        "score": 1
+        "score": 2
     },
     {
         "nom": "Sausset",
@@ -81,6 +81,12 @@
         "nom": "Orban",
         "prenom": "Audrey",
         "image": "/assets/images/audrey.jpg",
+        "score": 1
+    },
+    {
+        "nom": "Brunet",
+        "prenom": "Yohan",
+        "image": "/assets/images/yohan.jpeg",
         "score": 1
     }
 ]
