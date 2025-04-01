@@ -9,6 +9,7 @@ import { MainComponent } from './components/main/main.component';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { PageClassementComponent } from './components/page-classement/page-classement.component';
 import { HistoriqueComponent } from './components/historique/historique.component';
+import { GoogleTagManagerModule } from 'angular-google-tag-manager';
 
 @NgModule({ declarations: [
         AppComponent,
@@ -17,7 +18,14 @@ import { HistoriqueComponent } from './components/historique/historique.componen
         PageClassementComponent,
         HistoriqueComponent
     ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
+    bootstrap: [AppComponent], 
+    imports: [BrowserModule,
         AppRoutingModule,
-        BrowserAnimationsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        BrowserAnimationsModule,
+    GoogleTagManagerModule.forRoot({
+        id:'GTM-TSSHSWGP'
+    })], 
+    providers: [provideHttpClient(withInterceptorsFromDi()),
+        {provide: 'googleTagManagerId', useValue: 'GTM-TSSHSWGP'}
+    ] })
 export class AppModule { }
