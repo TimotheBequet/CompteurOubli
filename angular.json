@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "CompteurOubli:build:production"
+              "buildTarget": "CompteurOubli:build:production"
             },
             "development": {
-              "browserTarget": "CompteurOubli:build:development"
+              "buildTarget": "CompteurOubli:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "CompteurOubli:build"
+            "buildTarget": "CompteurOubli:build"
           }
         },
         "test": {
