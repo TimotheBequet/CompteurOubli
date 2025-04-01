@@ -4,9 +4,10 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-page-classement',
-  templateUrl: './page-classement.component.html',
-  styleUrls: ['./page-classement.component.scss']
+    selector: 'app-page-classement',
+    templateUrl: './page-classement.component.html',
+    styleUrls: ['./page-classement.component.scss'],
+    standalone: false
 })
 export class PageClassementComponent implements OnInit {
   lstPersons: Persons[] = [];

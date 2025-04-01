@@ -3,9 +3,10 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-historique',
-  templateUrl: './historique.component.html',
-  styleUrls: ['./historique.component.scss']
+    selector: 'app-historique',
+    templateUrl: './historique.component.html',
+    styleUrls: ['./historique.component.scss'],
+    standalone: false
 })
 export class HistoriqueComponent implements OnInit {
   file: String = '';
