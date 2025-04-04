@@ -18,7 +18,8 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": {
-              "base": "dist/compteur-oubli"
+              "base": "dist/compteur-oubli",
+              "browser": ""
             },
             "index": "src/index.html",
             "polyfills": [
