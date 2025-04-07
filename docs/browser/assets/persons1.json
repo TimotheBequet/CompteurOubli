@@ -93,13 +93,13 @@
     {
         "nom": "Passard",
         "prenom": "Keita",
-        "image": "/assets/images/keita.jpg",
+        "image": "/assets/images/keita.jpeg",
         "score": 1
     },
     {
         "nom": "Hachez",
         "prenom": "Théo",
-        "image": "/assets/images/theo-hachez.jpg",
+        "image": "/assets/images/theo-hachez.jpeg",
         "score": 1
     },
     {
@@ -111,7 +111,7 @@
     {
         "nom": "Sammartano",
         "prenom": "Vincenzo",
-        "image": "/assets/images/vinch.JPG",
+        "image": "/assets/images/vinch.jpg",
         "score": 1
     }
 ]
