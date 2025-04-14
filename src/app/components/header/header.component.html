@@ -2,8 +2,8 @@
     <h1 class="header-title"><a routerLink="/home">"Un jour, tu oublieras ta tête"</a></h1>
     <nav class="histo">
         <ul class="histo-list">
-            <li class="histo-list-item" (click)="trackMe()"><a routerLink="/home" [routerLinkActive]="['active']">Saison en cours</a></li>
-            <li class="histo-list-item" (click)="trackMe()"><a routerLink="/historique/0" [routerLinkActive]="['active']">Palmarès saison 2023/2024</a></li>
+            <li class="histo-list-item" (click)="trackMe('Saison en cours')"><a routerLink="/home" [routerLinkActive]="['active']">Saison en cours</a></li>
+            <li class="histo-list-item" (click)="trackMe('Palmarès saison 2023/2024')"><a routerLink="/historique/0" [routerLinkActive]="['active']">Palmarès saison 2023/2024</a></li>
         </ul>
     </nav>
 </div>

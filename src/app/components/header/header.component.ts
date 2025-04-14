@@ -10,11 +10,9 @@ import { GoogleTagManagerService } from 'angular-google-tag-manager';
 export class HeaderComponent {
     constructor(private gtmService: GoogleTagManagerService) {}
 
-    trackMe() {
-        console.log("Hello");
+    trackMe(link: String) {
         const gtmTag = {
-            event: "my-btn",
-            data: "my-custom-event"
+            event: `Clic ${link}`,
         };
         this.gtmService.pushTag(gtmTag);
     }
