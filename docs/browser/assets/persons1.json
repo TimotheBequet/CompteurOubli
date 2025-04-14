@@ -113,5 +113,11 @@
         "prenom": "Vincenzo",
         "image": "/assets/images/vinch.JPG",
         "score": 1
+    },
+    {
+        "nom": "Dada & Vinch",
+        "prenom": "",
+        "image": "/assets/images/dada_vinch.jpg",
+        "score": 1
     }
 ]
