@@ -1,0 +1,70 @@
+.reglement-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    background-color: #ffffff3b;
+    padding-top: 30px;
+}
+
+.reglement-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgb(118, 57, 188);
+
+    & h1 {
+        color: rgb(118, 57, 188);
+        margin-bottom: 10px;
+        font-size: 2.5rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    & h2 {
+        font-weight: bold;
+        margin-top: 0;
+    }
+}
+
+.preambule,
+.article {
+    width: 80%;
+    font-size: 1rem;
+}
+
+.preambule {
+    margin-bottom: 30px;
+}
+
+.article {
+    margin-bottom: 25px;
+
+    &-title {
+        font-size: 1.2rem;
+        background-color: rgba(118, 57, 188, 0.221);
+        padding: 10px;
+        border-left: 5px solid rgb(118, 57, 188);
+        font-weight: bold;
+    }
+
+    &-content {
+        padding: 10px 20px;
+
+        ol {
+            padding-left: 20px;
+        }
+
+        p {
+            text-align: justify;
+        }
+    }
+}
+
+.sub-article {
+    margin-bottom: 10px;
+}
+
+.annotation {
+    text-align: center !important;
+}

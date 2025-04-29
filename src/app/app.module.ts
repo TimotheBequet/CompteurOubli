@@ -10,13 +10,15 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { PageClassementComponent } from './components/page-classement/page-classement.component';
 import { HistoriqueComponent } from './components/historique/historique.component';
 import { GoogleTagManagerModule } from 'angular-google-tag-manager';
+import { ReglementComponent } from './components/reglement/reglement.component';
 
 @NgModule({ declarations: [
         AppComponent,
         HeaderComponent,
         MainComponent,
         PageClassementComponent,
-        HistoriqueComponent
+        HistoriqueComponent,
+        ReglementComponent
     ],
     bootstrap: [AppComponent], 
     imports: [BrowserModule,

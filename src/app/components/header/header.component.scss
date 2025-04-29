@@ -9,24 +9,27 @@
     align-items: center;
     padding-top: 1.5rem;
 
-    .header-title a {
-        text-decoration: none;
-        text-align: center;
-        font-size: 50px;
-        font-family: 'Protest Strike', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-weight: bold;
-        text-transform: uppercase;
-        text-shadow: rgb(151, 148, 134) 1px 0 10px;
-        color: white;
-        margin-top: 10px;
+    .header-title {
+        margin-top: 40px;
+        a {
+            text-decoration: none;
+            text-align: center;
+            font-size: 50px;
+            font-family: 'Protest Strike', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: rgb(151, 148, 134) 1px 0 10px;
+            color: white;
+            margin-top: 10px;
 
-        @media (max-width: 768px) {
-            font-size: 30px;
-        }
+            @media (max-width: 768px) {
+                font-size: 30px;
+            }
 
-        @media (max-width: 450px) {
-            display: block;
-            margin: 10px 20px 0 20px;
+            @media (max-width: 450px) {
+                display: block;
+                margin: 10px 20px 0 20px;
+            }
         }
     }
 
@@ -38,6 +41,7 @@
             justify-content: space-around;
 
             @media (max-width: 450px) {
+                padding: 0;
                 flex-direction: column;
                 align-items: center;
             }
@@ -53,6 +57,7 @@
                         font-size: 17px;
                         color: rgb(206, 182, 233);
                         font-weight: bold;
+                        text-decoration: underline;
                     }
                 }
             }
