@@ -9,6 +9,10 @@
     align-items: center;
     padding-top: 1.5rem;
 
+    @media (max-width: 450px) {
+        height: 150px;
+    }
+
     .header-title {
         margin-top: 40px;
         a {
