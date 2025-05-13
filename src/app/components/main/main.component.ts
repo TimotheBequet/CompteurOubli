@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
     standalone: false
 })
 export class MainComponent {
-  file: String = 'persons1';
+  file: String = 'current';
 }

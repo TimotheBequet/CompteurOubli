@@ -4,5 +4,18 @@ html, body { height: 100%;}
 body { 
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    background: linear-gradient(to right bottom, #051937, #444964, #808195, #bfbec8, #ffffff) no-repeat fixed;
+    //background: linear-gradient(to right bottom, #051937, #444964, #808195, #bfbec8, #ffffff) no-repeat fixed;
+    background-color: #c8cbfe;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='104' viewBox='0 0 60 104' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='0.5'%3E%3Cpolygon points='30,0 60,17.3 60,52 30,69.3 0,52 0,17.3'/%3E%3Cpolygon points='30,69.3 60,86.6 60,121.3 30,138.6 0,121.3 0,86.6' transform='translate(0,-34)'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 120px 208px;
+    background-attachment: fixed;
+}
+
+/* surcharge style Material */
+.mat-mdc-menu-panel, .mat-mdc-menu-content {
+    background-color: white !important;
+}
+
+.mat-mdc-menu-item, .mat-mdc-menu-item:visited, .mat-mdc-menu-item:link {
+    color: darkblue !important;
 }

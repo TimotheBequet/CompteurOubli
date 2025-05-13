@@ -5,17 +5,17 @@
     align-items: center;
     width: 100%;
     margin-top: 40px;
-    background-color: #ffffff3b;
+    //background-color: #ffffff3b;
     padding-top: 30px;
 }
 
 .reglement-header {
     text-align: center;
     margin-bottom: 30px;
-    border-bottom: 2px solid rgb(118, 57, 188);
+    border-bottom: 2px solid darkblue;
 
     & h1 {
-        color: rgb(118, 57, 188);
+        color: darkblue;
         margin-bottom: 10px;
         font-size: 2.5rem;
         font-weight: bold;
@@ -42,10 +42,11 @@
 
     &-title {
         font-size: 1.2rem;
-        background-color: rgba(118, 57, 188, 0.221);
+        background-color: rgba(0, 0, 139, 0.5);
         padding: 10px;
-        border-left: 5px solid rgb(118, 57, 188);
+        border-left: 5px solid darkblue;
         font-weight: bold;
+        color: white;
     }
 
     &-content {

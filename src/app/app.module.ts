@@ -11,6 +11,9 @@ import { PageClassementComponent } from './components/page-classement/page-class
 import { HistoriqueComponent } from './components/historique/historique.component';
 import { GoogleTagManagerModule } from 'angular-google-tag-manager';
 import { ReglementComponent } from './components/reglement/reglement.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({ declarations: [
         AppComponent,
@@ -24,7 +27,10 @@ import { ReglementComponent } from './components/reglement/reglement.component';
     imports: [BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
-    GoogleTagManagerModule.forRoot({
+        MatMenuModule,
+        MatButtonModule,
+        MatIconModule,
+        GoogleTagManagerModule.forRoot({
         id:'GTM-TSSHSWGP'
     })], 
     providers: [provideHttpClient(withInterceptorsFromDi()),

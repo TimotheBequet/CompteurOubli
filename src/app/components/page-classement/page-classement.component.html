@@ -2,7 +2,7 @@
     <h1 class="main-title">{{title}}</h1>
     <div class="cards-list">
         <div *ngFor="let person of lstPersons;let i=index;" class="card">
-            <div class="card-container" [ngClass]="getClassFromIndex(i)">
+            <div class="card-container" [ngClass]="getClassFromIndex(i)" id="{{getClassFromIndex(i)}}">
                 <img *ngIf="isAffichageMedaille(i)" class="card-medaille" src="{{getUrlMedaille(i)}}"/>
                 <div class="card-image-container">
                     <img class="card-image" src="{{basePath + person.image}}">

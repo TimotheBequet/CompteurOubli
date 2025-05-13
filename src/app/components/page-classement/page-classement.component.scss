@@ -8,7 +8,7 @@
         margin-top: 35px;
         text-transform: uppercase;
         font-weight: bolder;
-        color: aliceblue;
+        color: darkblue;
         font-size: 35px;
     }
 
@@ -19,7 +19,7 @@
         margin: 30px 10%;
 
         .card {
-            width: calc(33.33% - 20px);
+            width: calc(33.33%);
             display: flex;
             justify-content: center;
 
@@ -27,7 +27,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
-                padding: 10px;
+                padding: 5px;
                 border-radius: 10px;
                 margin: 20px;
                 background-color: white;
@@ -35,6 +35,8 @@
                 height: 250px;
                 transition: all 0.2s linear;
                 position: relative;
+                z-index: 100;
+                border: rgb(143, 143, 143) 1px solid;
 
                 .card-medaille {
                     max-width: 35%;
@@ -50,6 +52,7 @@
                     overflow: hidden;
                     position: relative;
                     margin: auto;
+                    border-radius: 10px 10px 0 0;
 
                     .card-image {
                         width: 100%;
@@ -57,6 +60,7 @@
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
+                        border-radius: 10px 10px 0 0;
                     }
                 }
 
@@ -75,13 +79,16 @@
             }
 
             .gold {
-                box-shadow: gold 0px 7px 29px 0px;
+                box-shadow: gold 0px 10px 40px 0px;
+                border: gold 5px solid;
             }
             .silver {
-                box-shadow: rgb(192, 191, 191) 0px 7px 29px 0px;
+                box-shadow: rgb(93, 93, 93) 0px 10px 40px 0px;
+                border: silver 5px solid;
             }
             .bronze {
-                box-shadow: #CD7F32 0px 7px 29px 0px;
+                box-shadow: #a7621d 0px 10px 40px 0px;
+                border: #d58d45 5px solid;
             }
 
             @media (max-width: 1024px) {
