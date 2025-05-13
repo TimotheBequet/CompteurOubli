@@ -3,13 +3,13 @@
         "nom": "Borgna",
         "prenom": "Jérémy",
         "image": "/assets/images/Jerem.jpg",
-        "score": 4
+        "score": 6
     },
     {
         "nom": "Carmaran",
         "prenom": "Julian",
         "image": "/assets/images/julian.jpg",
-        "score": 1
+        "score": 2
     },
     {
         "nom": "Giraudon",
@@ -100,7 +100,7 @@
         "nom": "Hachez",
         "prenom": "Théo",
         "image": "/assets/images/theo-hachez.jpg",
-        "score": 1
+        "score": 2
     },
     {
         "nom": "Centis",
@@ -118,6 +118,18 @@
         "nom": "Dada & Vinch",
         "prenom": "",
         "image": "/assets/images/dada_vinch.jpg",
+        "score": 1
+    },
+    {
+        "nom": "Bertrand",
+        "prenom": "Pierre-Antoine",
+        "image": "/assets/images/pab.jpeg",
+        "score": 1
+    },
+    {
+        "nom": "Languedoc",
+        "prenom": "Raphaël",
+        "image": "/assets/images/raph.jpg",
         "score": 1
     }
 ]

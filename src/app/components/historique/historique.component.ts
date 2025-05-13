@@ -18,6 +18,6 @@ export class HistoriqueComponent implements OnInit {
   }
 
   getHisto(): void {
-    this.file = 'persons' + this.route.snapshot.paramMap.get('number');
+    this.file = this.route.snapshot.paramMap.get('number')!;
   }
 }
