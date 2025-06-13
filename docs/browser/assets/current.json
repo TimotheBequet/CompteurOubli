@@ -3,7 +3,7 @@
         "nom": "Borgna",
         "prenom": "Jérémy",
         "image": "/assets/images/Jerem.jpg",
-        "score": 6
+        "score": 7
     },
     {
         "nom": "Carmaran",
@@ -69,7 +69,7 @@
         "nom": "Urban",
         "prenom": "Blaise",
         "image": "/assets/images/blaise.jpg",
-        "score": 1
+        "score": 3
     },
     {
         "nom": "Sistac",
