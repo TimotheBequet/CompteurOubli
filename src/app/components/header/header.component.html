@@ -1,9 +1,17 @@
 <div class="header-container">
-    <h1 class="header-title"><a routerLink="/home">"Un jour, tu oublieras ta tête"</a></h1>
-    <nav class="histo">
-        <ul class="histo-list">
-            <li class="histo-list-item"><a routerLink="/home">Saison en cours</a></li>
-            <li class="histo-list-item"><a routerLink="/historique/0">Palmarès saison 2023/2024</a></li>
+    <div class="header-title-container">
+        <img class="header-img" src="{{basePath + '/assets/images/Logo_TOAC.png'}}"/>
+        <h1 class="header-title"><a routerLink="/home">"Un jour, tu oublieras ta tête"</a></h1>
+    </div>
+    <nav class="header-menu">
+        <ul class="menu-list">
+            <li class="menu-list-item" (click)="trackMe('Règlement')"><a mat-button class="menu-list-item-link" routerLink="/reglement" [routerLinkActive]="['active']">Règlement</a></li>
+            <li class="menu-list-item" (click)="trackMe('Saison en cours')"><a mat-button class="menu-list-item-link" routerLink="/home" [routerLinkActive]="['active']">Saison en cours</a></li>
+            <li class="menu-list-item">
+                <button mat-button [matMenuTriggerFor]="menu" class="menu-list-item">Palmarès <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="arrow_drop_down"></mat-icon></button>
+                <mat-menu #menu="matMenu">
+                  <a mat-menu-item class="menu-list-item-link" routerLink="/historique/2023-2024" [routerLinkActive]="['active']" (click)="trackMe('Palmarès saison 2023/2024')">Saison 2023/2024</a>
+                </mat-menu></li>
         </ul>
     </nav>
 </div>
