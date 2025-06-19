@@ -12,8 +12,8 @@ export class HeaderComponent implements OnInit {
     constructor() {}
 
     ngOnInit(): void {
-        if (environment.name === 'PROD') {
+        /*if (environment.name === 'PROD') {
             this.basePath = '/browser';
-        }
+        }*/
     }
 }

@@ -19,11 +19,11 @@ export class PageClassementComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    if (environment.name === 'PROD') {
+    /*if (environment.name === 'PROD') {
       this.basePath = '/browser';
     } else {
       this.basePath = '.';
-    }
+    }*/
     this.initListePersons();
     if (this.file != 'current') {
       this.celebrate();
