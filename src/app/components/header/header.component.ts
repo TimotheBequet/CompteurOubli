@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { GoogleTagManagerService } from 'angular-google-tag-manager';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -10,18 +9,11 @@ import { environment } from 'src/environments/environment';
 })
 export class HeaderComponent implements OnInit {
     basePath: string = '';
-    constructor(private gtmService: GoogleTagManagerService) {}
+    constructor() {}
 
     ngOnInit(): void {
         if (environment.name === 'PROD') {
             this.basePath = '/CompteurOubli';
         }
-    }
-
-    trackMe(link: String) {
-        const gtmTag = {
-            event: `Clic ${link}`,
-        };
-        this.gtmService.pushTag(gtmTag);
     }
 }
