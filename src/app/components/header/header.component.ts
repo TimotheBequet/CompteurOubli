@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
 
     ngOnInit(): void {
         if (environment.name === 'PROD') {
-            this.basePath = '/CompteurOubli';
+            this.basePath = '/browser';
         }
     }
 }

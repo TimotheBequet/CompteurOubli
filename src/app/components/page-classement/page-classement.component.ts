@@ -20,7 +20,7 @@ export class PageClassementComponent implements OnInit {
 
   ngOnInit(): void {
     if (environment.name === 'PROD') {
-      this.basePath = 'dist/browser';
+      this.basePath = '/browser';
     } else {
       this.basePath = '.';
     }
