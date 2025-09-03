@@ -19,9 +19,9 @@ export class PageClassementComponent implements OnInit, OnChanges {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    if (environment.name === 'PROD') {
+    /*if (environment.name === 'PROD') {
       this.basePath = '/CompteurOubli';
-    }
+    }*/
   }
 
   ngOnChanges(changes: SimpleChanges): void {
