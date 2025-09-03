@@ -1,4 +1,4 @@
-import { AfterViewChecked, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Persons } from 'src/app/classes/persons';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
@@ -10,12 +10,11 @@ import confetti from 'canvas-confetti';
     styleUrls: ['./page-classement.component.scss'],
     standalone: false
 })
-export class PageClassementComponent implements OnInit, OnChanges, AfterViewChecked {
+export class PageClassementComponent implements OnInit, OnChanges {
   lstPersons: Persons[] = [];
   basePath: string = '';
   @Input('file') file!: String;
   title: String = '';
-  private shouldCelebrate: boolean = false;
 
   constructor(private http: HttpClient) {}
 
@@ -25,20 +24,9 @@ export class PageClassementComponent implements OnInit, OnChanges, AfterViewChec
     }
   }
 
-  ngAfterViewChecked(): void {
-    if (this.shouldCelebrate) {
-      this.celebrate();
-      this.shouldCelebrate = false;
-    }
-  }
-
   ngOnChanges(changes: SimpleChanges): void {
     this.lstPersons = [];
-
     this.initListePersons();
-    if (this.file != 'current') {
-      this.shouldCelebrate = true;
-    }
   }
 
   initListePersons(): void {
@@ -48,6 +36,10 @@ export class PageClassementComponent implements OnInit, OnChanges, AfterViewChec
         this.lstPersons.sort(function(a, b) {
           return b.score - a.score;
         });
+      }
+
+      if (this.file !== 'current') {
+        setTimeout(() => this.celebrate(), 0);
       }
     });
     if (this.file === 'current') {
