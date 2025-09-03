@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewChecked, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Persons } from 'src/app/classes/persons';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
@@ -10,11 +10,12 @@ import confetti from 'canvas-confetti';
     styleUrls: ['./page-classement.component.scss'],
     standalone: false
 })
-export class PageClassementComponent implements OnInit {
+export class PageClassementComponent implements OnInit, OnChanges, AfterViewChecked {
   lstPersons: Persons[] = [];
   basePath: string = '';
   @Input('file') file!: String;
   title: String = '';
+  private shouldCelebrate: boolean = false;
 
   constructor(private http: HttpClient) {}
 
@@ -22,9 +23,21 @@ export class PageClassementComponent implements OnInit {
     if (environment.name === 'PROD') {
       this.basePath = '/CompteurOubli';
     }
+  }
+
+  ngAfterViewChecked(): void {
+    if (this.shouldCelebrate) {
+      this.celebrate();
+      this.shouldCelebrate = false;
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.lstPersons = [];
+    
     this.initListePersons();
     if (this.file != 'current') {
-      this.celebrate();
+      this.shouldCelebrate = true;
     }
   }
 
@@ -41,6 +54,8 @@ export class PageClassementComponent implements OnInit {
       this.title = 'Classement';
     } else if (this.file === '2023-2024') {
       this.title = 'Classement Saison 2023/2024';
+    } else if (this.file === '2024-2025') {
+      this.title = 'Classement Saison 2024/2025';
     }
   }
   
@@ -74,6 +89,7 @@ export class PageClassementComponent implements OnInit {
 
   celebrate(): void {
     const numberOne = document.getElementById('gold');
+    
     if (numberOne != null && numberOne != undefined) {
       const rect = numberOne?.getBoundingClientRect();
       const left = ((((rect?.left + rect?.right)/2) * 100) / document.body.clientWidth) / 100;

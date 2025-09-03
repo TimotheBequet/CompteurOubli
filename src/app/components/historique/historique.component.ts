@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
@@ -8,13 +8,13 @@ import { Location } from '@angular/common';
     styleUrls: ['./historique.component.scss'],
     standalone: false
 })
-export class HistoriqueComponent implements OnInit {
+export class HistoriqueComponent implements DoCheck {
   file: String = '';
 
   constructor(private route: ActivatedRoute, private location: Location) {}
 
-  ngOnInit(): void {
-      this.getHisto();
+  ngDoCheck(): void {
+    this.getHisto();
   }
 
   getHisto(): void {
