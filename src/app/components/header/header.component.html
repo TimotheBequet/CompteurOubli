@@ -5,8 +5,8 @@
     </div>
     <nav class="header-menu">
         <ul class="menu-list">
-            <li class="menu-list-item" (click)="trackMe('Règlement')"><a mat-button class="menu-list-item-link" routerLink="/reglement" [routerLinkActive]="['active']">Règlement</a></li>
-            <li class="menu-list-item" (click)="trackMe('Saison en cours')"><a mat-button class="menu-list-item-link" routerLink="/home" [routerLinkActive]="['active']">Saison en cours</a></li>
+            <li class="menu-list-item"><a mat-button class="menu-list-item-link" routerLink="/reglement" [routerLinkActive]="['active']">Règlement</a></li>
+            <li class="menu-list-item"><a mat-button class="menu-list-item-link" routerLink="/home" [routerLinkActive]="['active']">Saison en cours</a></li>
             <li class="menu-list-item">
                 <button mat-button [matMenuTriggerFor]="menu" class="menu-list-item">Palmarès <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="arrow_drop_down"></mat-icon></button>
                 <mat-menu #menu="matMenu">

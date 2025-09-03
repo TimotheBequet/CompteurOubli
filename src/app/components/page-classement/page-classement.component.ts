@@ -34,7 +34,7 @@ export class PageClassementComponent implements OnInit, OnChanges, AfterViewChec
 
   ngOnChanges(changes: SimpleChanges): void {
     this.lstPersons = [];
-    
+
     this.initListePersons();
     if (this.file != 'current') {
       this.shouldCelebrate = true;
