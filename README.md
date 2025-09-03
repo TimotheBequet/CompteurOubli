@@ -15,6 +15,8 @@ Run `ng generate component component-name` to generate a new component. You can 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 Build en config prod : `ng build --configuration=production --output-path docs --base-href /CompteurOubli/`
 
+Build Angular 16+ : `ng build --configuration production --output-path=docs && mv docs/browser/* docs/ && rmdir docs/browser`
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
