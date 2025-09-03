@@ -1,6 +1,6 @@
 <div class="main">
     <h1 class="main-title">{{title}}</h1>
-    <div class="cards-list">
+    <div *ngIf="lstPersons.length > 0" class="cards-list">
         <div *ngFor="let person of lstPersons;let i=index;" class="card">
             <div class="card-container" [ngClass]="getClassFromIndex(i)" id="{{getClassFromIndex(i)}}">
                 <img *ngIf="isAffichageMedaille(i)" class="card-medaille" src="{{getUrlMedaille(i)}}"/>
@@ -13,5 +13,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div *ngIf="lstPersons.length==0">
+        <p>Pas encore d'oublis (mais on compte sur Jerem pour ouvrir le compteur)</p>
     </div>
 </div>
