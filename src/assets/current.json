@@ -1,3 +1,14 @@
 [
-    
+    {
+        "nom": "Languedoc",
+        "prenom": "Raphaël",
+        "image": "/assets/images/raph.jpg",
+        "score": 1
+    },
+    {
+        "nom": "Chabert",
+        "prenom": "Yann",
+        "image": "/assets/images/yann.jpg",
+        "score": 1
+    }
 ]
