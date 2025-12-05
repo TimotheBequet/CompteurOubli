@@ -9,6 +9,36 @@
         "nom": "Chabert",
         "prenom": "Yann",
         "image": "/assets/images/yann.jpg",
+        "score": 2
+    },
+    {
+        "nom": "Urban",
+        "prenom": "Blaise",
+        "image": "/assets/images/blaise.jpg",
         "score": 1
+    },
+    {
+        "nom": "Centis",
+        "prenom": "David",
+        "image": "/assets/images/david.jpg",
+        "score": 2
+    },
+    {
+        "nom": "Borgna",
+        "prenom": "Jérémy",
+        "image": "/assets/images/Jerem.jpg",
+        "score": 4
+    },
+    {
+        "nom": "Passard",
+        "prenom": "Keita",
+        "image": "/assets/images/keita.jpg",
+        "score": 1
+    },
+    {
+        "nom": "Sammartano",
+        "prenom": "Vincenzo",
+        "image": "/assets/images/vinch.JPG",
+        "score": 3
     }
 ]
