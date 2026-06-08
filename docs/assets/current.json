@@ -27,18 +27,91 @@
         "nom": "Borgna",
         "prenom": "Jérémy",
         "image": "/assets/images/Jerem.jpg",
-        "score": 4
+        "score": 5
     },
     {
         "nom": "Passard",
         "prenom": "Keita",
         "image": "/assets/images/keita.jpg",
-        "score": 1
+        "score": 3
     },
     {
         "nom": "Sammartano",
         "prenom": "Vincenzo",
         "image": "/assets/images/vinch.JPG",
         "score": 3
+    },
+    {
+        "nom": "Sistac",
+        "prenom": "François",
+        "image": "/assets/images/francois.jpg",
+        "score": 1
+    },
+    {
+        "nom": "Orban",
+        "prenom": "Audrey",
+        "image": "/assets/images/audrey.jpg",
+        "score": 2
+    },
+    {
+        "nom": "Centis",
+        "prenom": "David",
+        "image": "/assets/images/david.jpg",
+        "score": 2
+    }
+    ,
+    {
+        "nom": "Izard",
+        "prenom": "Manon",
+        "image": "/assets/images/manon-i.jpg",
+        "score": 1
+    },
+    {
+        "nom": "Brunet",
+        "prenom": "Yohan",
+        "image": "/assets/images/yohan.jpeg",
+        "score": 1
+    },
+    {
+        "nom": "Bracco",
+        "prenom": "Corentin",
+        "image": "/assets/images/corentin.jpeg",
+        "score": 1
+    },
+    {
+        "nom": "Bertrand",
+        "prenom": "Pierre-Antoine",
+        "image": "/assets/images/pab.jpeg",
+        "score": 1
+    },
+    {
+        "nom": "Bequet",
+        "prenom": "Timothé",
+        "image": "/assets/images/Tim.jpeg",
+        "score": 1
+    },
+    {
+        "nom": "Egreteau",
+        "prenom": "Elian",
+        "image": "/assets/images/elian.jpg",
+        "score": 1
+    },
+    {
+        "nom": "Chaube",
+        "prenom": "Joanna",
+        "image": "/assets/images/joanna.jpg",
+        "score": 1
+    },
+    {
+        "nom": "Orban",
+        "prenom": "Anaïs",
+        "image": "/assets/images/anais.jpg",
+        "score": 1
+    },
+    {
+        "nom": "Borjon-Piron",
+        "prenom": "Juline",
+        "image": "/assets/images/juline.jpg",
+        "score": 1
     }
 ]
