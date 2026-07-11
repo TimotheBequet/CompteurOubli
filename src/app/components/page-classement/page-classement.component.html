@@ -1,5 +1,8 @@
 <div class="main">
-    <h1 class="main-title">{{title}}</h1>
+    <div class="main-title-wrap">
+        <h1 class="main-title">{{title}}</h1>
+        <div class="main-title-underline"></div>
+    </div>
     <div *ngIf="lstPersons.length > 0" class="cards-list">
         <div *ngFor="let person of lstPersons;let i=index;" class="card">
             <div class="card-container" [ngClass]="getClassFromIndex(i)" id="{{getClassFromIndex(i)}}">
@@ -8,13 +11,13 @@
                     <img class="card-image" src="{{basePath + person.image}}">
                 </div>
                 <div class="card-infos">
-                    <p><strong>{{person.prenom}} {{person.nom}}</strong></p>
-                    <p>Oubli<i *ngIf="person.score > 1">s</i> : <strong>{{person.score}}</strong></p>
+                    <p class="card-name">{{person.prenom}} {{person.nom}}</p>
+                    <p class="card-score">Oubli<i *ngIf="person.score > 1">s</i> : <strong>{{person.score}}</strong></p>
                 </div>
             </div>
         </div>
     </div>
-    <div *ngIf="lstPersons.length==0">
+    <div *ngIf="lstPersons.length==0" class="empty-state">
         <p>Pas encore d'oublis (mais on compte sur Jerem pour ouvrir le compteur)</p>
     </div>
 </div>

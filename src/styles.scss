@@ -1,21 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-primary: #0b3d91;
+    --color-primary-dark: #072a66;
+    --color-primary-light: #3b82f6;
+    --color-accent: #0ea5e9;
+    --color-bg-start: #eef4ff;
+    --color-bg-end: #ffffff;
+    --color-surface: #ffffff;
+    --color-text: #0f172a;
+    --color-text-muted: #64748b;
+    --color-gold: #f5b301;
+    --color-silver: #9aa3ad;
+    --color-bronze: #c07a3e;
+    --shadow-soft: 0 10px 30px -10px rgba(11, 61, 145, 0.18);
+    --shadow-hover: 0 20px 40px -12px rgba(11, 61, 145, 0.3);
+    --radius-lg: 20px;
+    --radius-md: 14px;
+    font-family: 'Inter', "Helvetica Neue", sans-serif;
+}
 
 html, body { height: 100%;}
-body { 
+body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    //background: linear-gradient(to right bottom, #051937, #444964, #808195, #bfbec8, #ffffff) no-repeat fixed;
-    background-color: #c8cbfe;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='104' viewBox='0 0 60 104' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='0.5'%3E%3Cpolygon points='30,0 60,17.3 60,52 30,69.3 0,52 0,17.3'/%3E%3Cpolygon points='30,69.3 60,86.6 60,121.3 30,138.6 0,121.3 0,86.6' transform='translate(0,-34)'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 120px 208px;
-    background-attachment: fixed;
+    font-family: 'Inter', "Helvetica Neue", sans-serif;
+    color: var(--color-text);
+    background: linear-gradient(160deg, var(--color-bg-start) 0%, var(--color-bg-end) 100%) no-repeat fixed;
+    min-height: 100%;
 }
 
 /* surcharge style Material */
 .mat-mdc-menu-panel, .mat-mdc-menu-content {
-    background-color: white !important;
+    background-color: var(--color-surface) !important;
+    border-radius: var(--radius-md) !important;
 }
 
 .mat-mdc-menu-item, .mat-mdc-menu-item:visited, .mat-mdc-menu-item:link {
-    color: darkblue !important;
+    color: var(--color-primary-dark) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500 !important;
 }

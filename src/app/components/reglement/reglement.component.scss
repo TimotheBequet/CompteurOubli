@@ -1,71 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap');
+
 .reglement-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 40px;
-    //background-color: #ffffff3b;
-    padding-top: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+    font-family: 'Inter', sans-serif;
+
+    @media (max-width: 450px) {
+        padding: 24px 16px 40px;
+    }
 }
 
 .reglement-header {
     text-align: center;
-    margin-bottom: 30px;
-    border-bottom: 2px solid darkblue;
+    margin-bottom: 40px;
 
     & h1 {
-        color: darkblue;
-        margin-bottom: 10px;
-        font-size: 2.5rem;
-        font-weight: bold;
-        letter-spacing: 1px;
+        font-family: 'Poppins', sans-serif;
+        color: var(--color-text);
+        margin-bottom: 8px;
+        font-size: 2.1rem;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+
+        @media (max-width: 450px) {
+            font-size: 1.5rem;
+        }
     }
     & h2 {
-        font-weight: bold;
+        font-weight: 600;
         margin-top: 0;
+        color: var(--color-primary);
+        font-size: 1.1rem;
     }
 }
 
 .preambule,
 .article {
-    width: 80%;
+    width: 100%;
     font-size: 1rem;
 }
 
 .preambule {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    box-shadow: var(--shadow-soft);
+
+    p {
+        margin: 0;
+        text-align: justify;
+        color: var(--color-text-muted);
+    }
 }
 
 .article {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
 
     &-title {
-        font-size: 1.2rem;
-        background-color: rgba(0, 0, 139, 0.5);
-        padding: 10px;
-        border-left: 5px solid darkblue;
-        font-weight: bold;
-        color: white;
+        font-size: 1.05rem;
+        background: linear-gradient(120deg, var(--color-primary), var(--color-primary-dark));
+        padding: 14px 20px;
+        font-weight: 700;
+        color: #fff;
     }
 
     &-content {
-        padding: 10px 20px;
+        padding: 18px 22px;
 
-        ol {
+        ol, ul {
             padding-left: 20px;
         }
 
         p {
             text-align: justify;
+            margin: 0 0 10px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
         }
     }
 }
 
 .sub-article {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .annotation {
     text-align: center !important;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
 }

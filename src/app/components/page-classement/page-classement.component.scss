@@ -1,102 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Nunito&display=swap');
 
 .main {
     text-align: center;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Inter', sans-serif;
+
+    &-title-wrap {
+        margin-bottom: 40px;
+    }
 
     &-title {
-        margin-top: 35px;
+        margin: 0;
         text-transform: uppercase;
-        font-weight: bolder;
-        color: darkblue;
-        font-size: 35px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        color: var(--color-text);
+        font-size: 32px;
+
+        @media (max-width: 450px) {
+            font-size: 24px;
+        }
+    }
+
+    &-title-underline {
+        width: 70px;
+        height: 5px;
+        margin: 14px auto 0;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    }
+
+    .empty-state {
+        color: var(--color-text-muted);
+        font-size: 17px;
+        background: var(--color-surface);
+        border-radius: var(--radius-lg);
+        padding: 30px;
+        max-width: 500px;
+        margin: 0 auto;
+        box-shadow: var(--shadow-soft);
     }
 
     .cards-list {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin: 30px 10%;
+        justify-content: center;
+        gap: 28px;
+        margin: 0;
 
         .card {
-            width: calc(33.33%);
             display: flex;
             justify-content: center;
+            width: calc(33.33% - 20px);
 
             .card-container {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around;
-                padding: 5px;
-                border-radius: 10px;
-                margin: 20px;
-                background-color: white;
-                width: 200px;
-                height: 250px;
-                transition: all 0.2s linear;
+                padding: 0 0 20px;
+                border-radius: var(--radius-lg);
+                background-color: var(--color-surface);
+                width: 100%;
+                max-width: 220px;
+                transition: transform 0.25s ease, box-shadow 0.25s ease;
                 position: relative;
                 z-index: 100;
-                border: rgb(143, 143, 143) 1px solid;
+                box-shadow: var(--shadow-soft);
+                overflow: hidden;
 
                 .card-medaille {
-                    max-width: 35%;
+                    max-width: 32px;
                     z-index: 999;
                     position: absolute;
-                    top: -10px;
-                    left: -20px;
+                    top: 10px;
+                    left: 10px;
+                    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
                 }
 
                 .card-image-container {
-                    width: 200px;
-                    height: 150px;
+                    width: 100%;
+                    height: 160px;
                     overflow: hidden;
                     position: relative;
-                    margin: auto;
-                    border-radius: 10px 10px 0 0;
 
                     .card-image {
                         width: 100%;
+                        height: 100%;
+                        object-fit: cover;
                         position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        border-radius: 10px 10px 0 0;
+                        top: 0;
+                        left: 0;
                     }
                 }
 
-                .card-infos p:first-child {
-                    font-size: 20px;
-                    font-weight: bold;
-                }
+                .card-infos {
+                    padding: 16px 14px 0;
 
-                .card-infos > p > i {
-                    font-style: normal;
+                    .card-name {
+                        margin: 0 0 6px;
+                        font-size: 17px;
+                        font-weight: 700;
+                        color: var(--color-text);
+                    }
+
+                    .card-score {
+                        margin: 0;
+                        font-size: 14px;
+                        color: var(--color-text-muted);
+
+                        strong {
+                            color: var(--color-primary);
+                            font-size: 15px;
+                        }
+                    }
+
+                    i {
+                        font-style: normal;
+                    }
                 }
 
                 &:hover {
-                    transform: scale(1.05);
+                    transform: translateY(-6px) scale(1.02);
+                    box-shadow: var(--shadow-hover);
                 }
             }
 
             .gold {
-                box-shadow: gold 0px 10px 40px 0px;
-                border: gold 5px solid;
+                border: 3px solid var(--color-gold);
+                box-shadow: 0 12px 32px -8px rgba(245, 179, 1, 0.45);
             }
             .silver {
-                box-shadow: rgb(93, 93, 93) 0px 10px 40px 0px;
-                border: silver 5px solid;
+                border: 3px solid var(--color-silver);
+                box-shadow: 0 12px 32px -8px rgba(154, 163, 173, 0.4);
             }
             .bronze {
-                box-shadow: #a7621d 0px 10px 40px 0px;
-                border: #d58d45 5px solid;
+                border: 3px solid var(--color-bronze);
+                box-shadow: 0 12px 32px -8px rgba(192, 122, 62, 0.4);
             }
 
             @media (max-width: 1024px) {
-                width: calc(50% - 20px);
+                width: calc(50% - 14px);
             }
 
-            @media (max-width: 635px) {
-                width: 90%;
+            @media (max-width: 600px) {
+                width: 100%;
+
+                .card-container {
+                    max-width: 280px;
+                }
             }
         }
     }
