@@ -1,16 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { Saison } from 'src/app/classes/persons';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SaisonsService {
 
-  base = 'https://compteur-oublis.timothe-bequet.fr/api';
+  base = `${environment.apiBase}/api`;
 
   constructor(private httpClient: HttpClient) {}
 
-  getSaisons() {
-    return this.httpClient.get<number[]>(`${this.base}/saisons`);
+  getSaisons(): Observable<Saison[]> {
+    return this.httpClient.get<Saison[]>(`${this.base}/saisons`);
   }
 }

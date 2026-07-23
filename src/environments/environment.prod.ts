@@ -1,4 +1,5 @@
 export const environment = {
     name: 'PROD',
-    production: true
+    production: true,
+    apiBase: 'https://api.timbeq.com'
   };

@@ -1,22 +1,19 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { catchError, map, Observable, throwError } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { Persons } from 'src/app/classes/persons';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OublisService {
 
-  base = 'https://compteur-oublis.timothe-bequet.fr/api';
+  base = `${environment.apiBase}/api`;
 
   constructor(private httpClient: HttpClient) { }
 
-  getOublis(saison: number): Observable<any[]> {
-    const body = {'year': saison};
-    return this.httpClient.post<any[]>(`${this.base}/oublis`, body).pipe(
-      map((oubli) => {
-        return oubli;
-      })
-    );
+  getClassement(saisonId: number): Observable<Persons[]> {
+    return this.httpClient.get<Persons[]>(`${this.base}/saisons/${saisonId}/classement`);
   }
 }

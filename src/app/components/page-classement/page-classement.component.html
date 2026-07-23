@@ -3,12 +3,15 @@
         <h1 class="main-title">{{title}}</h1>
         <div class="main-title-underline"></div>
     </div>
-    <div *ngIf="lstPersons.length > 0" class="cards-list">
+    <div *ngIf="loading" class="loader-state">
+        <div class="loader-spinner"></div>
+    </div>
+    <div *ngIf="!loading && lstPersons.length > 0" class="cards-list">
         <div *ngFor="let person of lstPersons;let i=index;" class="card">
             <div class="card-container" [ngClass]="getClassFromIndex(i)" id="{{getClassFromIndex(i)}}">
                 <img *ngIf="isAffichageMedaille(i)" class="card-medaille" src="{{getUrlMedaille(i)}}"/>
                 <div class="card-image-container">
-                    <img class="card-image" src="{{basePath + person.image}}">
+                    <img *ngIf="person.photoUrl" class="card-image" src="{{apiBase + person.photoUrl}}">
                 </div>
                 <div class="card-infos">
                     <p class="card-name">{{person.prenom}} {{person.nom}}</p>
@@ -17,7 +20,7 @@
             </div>
         </div>
     </div>
-    <div *ngIf="lstPersons.length==0" class="empty-state">
+    <div *ngIf="!loading && lstPersons.length==0" class="empty-state">
         <p>Pas encore d'oublis (mais on compte sur Jerem pour ouvrir le compteur)</p>
     </div>
 </div>
