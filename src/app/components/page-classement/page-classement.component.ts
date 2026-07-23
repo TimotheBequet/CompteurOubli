@@ -1,7 +1,8 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Persons } from 'src/app/classes/persons';
-import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { SaisonsService } from 'src/app/services/saisons.service';
+import { OublisService } from 'src/app/services/oublis.service';
 import confetti from 'canvas-confetti';
 
 @Component({
@@ -13,10 +14,12 @@ import confetti from 'canvas-confetti';
 export class PageClassementComponent implements OnInit, OnChanges {
   lstPersons: Persons[] = [];
   basePath: string = '';
+  apiBase: string = environment.apiBase;
   @Input('file') file!: String;
   title: String = '';
+  loading: boolean = true;
 
-  constructor(private http: HttpClient) {}
+  constructor(private saisonsService: SaisonsService, private oublisService: OublisService) {}
 
   ngOnInit(): void {
     /*if (environment.name === 'PROD') {
@@ -26,31 +29,34 @@ export class PageClassementComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     this.lstPersons = [];
+    this.loading = true;
     this.initListePersons();
   }
 
   initListePersons(): void {
-    this.http.get<Persons[]>(this.basePath + `/assets/${this.file}.json`).subscribe((datas: any) => {
-      datas.map((data: any) => this.lstPersons.push(data));
-      if (this.lstPersons.length) {
-        this.lstPersons.sort(function(a, b) {
-          return b.score - a.score;
-        });
+    this.saisonsService.getSaisons().subscribe((saisons) => {
+      const saison = this.file === 'current'
+        ? saisons.find(s => s.estCourante)
+        : saisons.find(s => s.libelle === this.file);
+
+      if (!saison) {
+        this.loading = false;
+        return;
       }
 
-      if (this.file !== 'current') {
-        setTimeout(() => this.celebrate(), 0);
-      }
+      this.title = this.file === 'current' ? 'Classement' : `Classement Saison ${saison.libelle.replace('-', '/')}`;
+
+      this.oublisService.getClassement(saison.id).subscribe((datas) => {
+        this.lstPersons = datas.sort((a, b) => b.score - a.score);
+        this.loading = false;
+
+        if (this.file !== 'current' && this.lstPersons.length) {
+          setTimeout(() => this.celebrate(), 0);
+        }
+      });
     });
-    if (this.file === 'current') {
-      this.title = 'Classement';
-    } else if (this.file === '2023-2024') {
-      this.title = 'Classement Saison 2023/2024';
-    } else if (this.file === '2024-2025') {
-      this.title = 'Classement Saison 2024/2025';
-    }
   }
-  
+
   getClassFromIndex(index: number): string {
     if (index === 0) {
       return "gold";
@@ -81,7 +87,7 @@ export class PageClassementComponent implements OnInit, OnChanges {
 
   celebrate(): void {
     const numberOne = document.getElementById('gold');
-    
+
     if (numberOne != null && numberOne != undefined) {
       const rect = numberOne?.getBoundingClientRect();
       const left = ((((rect?.left + rect?.right)/2) * 100) / document.body.clientWidth) / 100;
