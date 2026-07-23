@@ -88,6 +88,10 @@
                 box-shadow: var(--shadow-soft);
                 overflow: hidden;
 
+                &.card-clickable {
+                    cursor: pointer;
+                }
+
                 .card-medaille {
                     max-width: 32px;
                     z-index: 999;
@@ -170,5 +174,84 @@
                 }
             }
         }
+    }
+
+    .modal-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        padding: 20px;
+    }
+
+    .modal-content {
+        position: relative;
+        background: var(--color-surface);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-hover);
+        padding: 28px;
+        width: 100%;
+        max-width: 420px;
+        max-height: 80vh;
+        overflow-y: auto;
+        text-align: left;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        background: none;
+        border: none;
+        font-size: 26px;
+        line-height: 1;
+        color: var(--color-text-muted);
+        cursor: pointer;
+    }
+
+    .modal-title {
+        margin: 0 0 20px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
+        color: var(--color-text);
+        font-size: 20px;
+    }
+
+    .modal-oublis-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-oubli-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        padding: 10px 14px;
+        border-radius: var(--radius-lg);
+        background: var(--color-bg, rgba(0, 0, 0, 0.03));
+    }
+
+    .modal-oubli-date {
+        font-size: 13px;
+        color: var(--color-text-muted);
+        white-space: nowrap;
+    }
+
+    .modal-oubli-commentaire {
+        font-size: 15px;
+        color: var(--color-text);
+        text-align: right;
+    }
+
+    .modal-empty {
+        color: var(--color-text-muted);
     }
 }

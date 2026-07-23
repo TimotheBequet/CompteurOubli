@@ -18,6 +18,11 @@ export class PageClassementComponent implements OnInit, OnChanges {
   @Input('file') file!: String;
   title: String = '';
   loading: boolean = true;
+  selectedPerson: Persons | null = null;
+  detailFeatureEnabled: boolean = false;
+
+  private static readonly DETAIL_FEATURE_START_DATE = new Date('2026-09-01');
+  private static readonly DETAIL_FEATURE_MIN_SAISON = '2026-2027';
 
   constructor(private saisonsService: SaisonsService, private oublisService: OublisService) {}
 
@@ -46,6 +51,9 @@ export class PageClassementComponent implements OnInit, OnChanges {
 
       this.title = this.file === 'current' ? 'Classement' : `Classement Saison ${saison.libelle.replace('-', '/')}`;
 
+      this.detailFeatureEnabled = new Date() >= PageClassementComponent.DETAIL_FEATURE_START_DATE
+        && saison.libelle >= PageClassementComponent.DETAIL_FEATURE_MIN_SAISON;
+
       this.oublisService.getClassement(saison.id).subscribe((datas) => {
         this.lstPersons = datas.sort((a, b) => b.score - a.score);
         this.loading = false;
@@ -55,6 +63,17 @@ export class PageClassementComponent implements OnInit, OnChanges {
         }
       });
     });
+  }
+
+  openDetail(person: Persons): void {
+    if (!this.detailFeatureEnabled) {
+      return;
+    }
+    this.selectedPerson = person;
+  }
+
+  closeDetail(): void {
+    this.selectedPerson = null;
   }
 
   getClassFromIndex(index: number): string {

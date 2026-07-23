@@ -8,7 +8,7 @@
     </div>
     <div *ngIf="!loading && lstPersons.length > 0" class="cards-list">
         <div *ngFor="let person of lstPersons;let i=index;" class="card">
-            <div class="card-container" [ngClass]="getClassFromIndex(i)" id="{{getClassFromIndex(i)}}">
+            <div class="card-container" [ngClass]="getClassFromIndex(i)" [class.card-clickable]="detailFeatureEnabled" id="{{getClassFromIndex(i)}}" (click)="openDetail(person)">
                 <img *ngIf="isAffichageMedaille(i)" class="card-medaille" src="{{getUrlMedaille(i)}}"/>
                 <div class="card-image-container">
                     <img *ngIf="person.photoUrl" class="card-image" src="{{apiBase + person.photoUrl}}">
@@ -22,5 +22,19 @@
     </div>
     <div *ngIf="!loading && lstPersons.length==0" class="empty-state">
         <p>Pas encore d'oublis (mais on compte sur Jerem pour ouvrir le compteur)</p>
+    </div>
+
+    <div *ngIf="selectedPerson" class="modal-backdrop" (click)="closeDetail()">
+        <div class="modal-content" (click)="$event.stopPropagation()">
+            <button class="modal-close" (click)="closeDetail()">&times;</button>
+            <h2 class="modal-title">{{selectedPerson.prenom}} {{selectedPerson.nom}}</h2>
+            <ul class="modal-oublis-list" *ngIf="selectedPerson.oublis?.length">
+                <li *ngFor="let oubli of selectedPerson.oublis" class="modal-oubli-item">
+                    <span class="modal-oubli-date">{{oubli.date | date:'dd/MM/yyyy'}}</span>
+                    <span class="modal-oubli-commentaire">{{oubli.commentaire || 'Objet non précisé'}}</span>
+                </li>
+            </ul>
+            <p *ngIf="!selectedPerson.oublis?.length" class="modal-empty">Aucun détail disponible pour ces oublis.</p>
+        </div>
     </div>
 </div>
