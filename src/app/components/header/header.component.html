@@ -10,6 +10,7 @@
                 <li class="menu-list-item">
                     <button mat-button [matMenuTriggerFor]="menu" class="menu-list-item-link">Palmarès <mat-icon aria-hidden="false" fontIcon="expand_more"></mat-icon></button>
                     <mat-menu #menu="matMenu">
+                      <a mat-menu-item routerLink="/historique/2025-2026" [routerLinkActive]="['active']">Saison 2025/2026</a>
                       <a mat-menu-item routerLink="/historique/2024-2025" [routerLinkActive]="['active']">Saison 2024/2025</a>
                       <a mat-menu-item routerLink="/historique/2023-2024" [routerLinkActive]="['active']">Saison 2023/2024</a>
                     </mat-menu>
